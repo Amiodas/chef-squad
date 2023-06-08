@@ -1,16 +1,21 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProviders";
 
 const Login = () => {
-  const { user, loginUser, signInWithGoogle, signInWithGithub } =
-    useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+
+  const { user, loginUser, signInWithGoogle, signInWithGithub } =
+    useContext(AuthContext);
+  const location = useLocation();
+  console.log(location);
+  const from = location.state?.from?.pathname || "/";
+  const navigate = useNavigate();
 
   const emailInput = (event) => {
     setEmail(event.target.value);
@@ -30,11 +35,13 @@ const Login = () => {
         setSuccess(true);
         setLoading(false);
         event.target.reset();
+        navigate(from);
       })
       .catch((error) => {
         setSuccess(false);
         console.log(error);
         setError(true);
+        setErrorMessage(error.message);
         setLoading(false);
       });
 
@@ -46,6 +53,7 @@ const Login = () => {
     signInWithGoogle()
       .then((res) => {
         console.log(res.user);
+        navigate(from);
       })
       .catch((error) => {
         setSuccess(false);
@@ -58,7 +66,9 @@ const Login = () => {
   const handleSignInWithGithub = () => {
     console.log(email, password);
     signInWithGithub()
-      .then(() => {})
+      .then(() => {
+        navigate(from);
+      })
       .catch((error) => {
         setSuccess(false);
         console.log(error);

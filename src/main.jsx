@@ -9,6 +9,7 @@ import Register from "./pages/Register/Register";
 import Blogs from "./pages/Blogs/Blogs";
 import AuthProviders from "./providers/AuthProviders";
 import ChefDetails from "./pages/ChefDetails/ChefDetails";
+import PrivateRoute from "./routes/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -33,7 +34,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/chef_details/:chefId",
-        element: <ChefDetails />,
+        element: (
+          <PrivateRoute>
+            <ChefDetails />
+          </PrivateRoute>
+        ),
       },
     ],
   },

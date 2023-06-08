@@ -8,7 +8,6 @@ const ChefSection = () => {
       .then((response) => response.json())
       .then((data) => setChefs(data));
   }, []);
-  console.log(chefs);
   return (
     <div className="text-center container mx-auto py-16">
       <h3 className="text-4xl font-bold">Chef Section</h3>
