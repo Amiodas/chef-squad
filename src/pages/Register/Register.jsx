@@ -4,12 +4,13 @@ import { AuthContext } from "../../providers/AuthProviders";
 import { updateProfile } from "firebase/auth";
 
 const Register = () => {
-  const [user, setUser] = useState(null);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [loading, setLoading] = useState(false);
+
   const { createUser } = useContext(AuthContext);
+
   const handleRegister = (event) => {
     setLoading(true);
     event.preventDefault();
@@ -34,7 +35,6 @@ const Register = () => {
           .catch((error) => {
             console.log(error);
           });
-        setUser(loggedInUser);
         setSuccess(true);
         setLoading(false);
         event.target.reset();
