@@ -1,0 +1,398 @@
+[
+  {
+    "id": 1,
+    "chefName": "John Smith",
+    "chefPicture": "./chefs/chef_01.png",
+    "yearOfExperience": 10,
+    "numOfRecipes": 5,
+    "likes": 500,
+    "description": "John Smith is a renowned chef with over 10 years of experience. He specializes in creating unique and delicious recipes.",
+    "category": "Italian Cuisine",
+    "recipes": [
+      {
+        "recipeName": "Spaghetti Bolognese",
+        "ingredients": [
+          "spaghetti",
+          "ground beef",
+          "tomatoes",
+          "onions",
+          "garlic"
+        ],
+        "cookingMethod": "Boil the spaghetti until al dente. In a separate pan, sauté onions and garlic. Add ground beef and cook until brown. Mix in tomatoes and simmer for 30 minutes. Serve the sauce over cooked spaghetti.",
+        "rating": 4.5,
+        "favorite": false
+      },
+      {
+        "recipeName": "Margherita Pizza",
+        "ingredients": [
+          "pizza dough",
+          "tomato sauce",
+          "mozzarella cheese",
+          "fresh basil",
+          "olive oil"
+        ],
+        "cookingMethod": "Roll out the pizza dough and spread tomato sauce on top. Sprinkle mozzarella cheese and fresh basil leaves. Drizzle olive oil over the pizza. Bake in a preheated oven at 425°F for 12-15 minutes or until the crust is golden brown.",
+        "rating": 4.8,
+        "favorite": false
+      },
+      {
+        "recipeName": "Tiramisu",
+        "ingredients": [
+          "ladyfingers",
+          "espresso",
+          "mascarpone cheese",
+          "cocoa powder",
+          "sugar"
+        ],
+        "cookingMethod": "Dip ladyfingers in espresso and layer them in a dish. In a separate bowl, mix mascarpone cheese, sugar, and a splash of espresso. Spread the mixture over the ladyfingers. Dust with cocoa powder. Refrigerate for at least 4 hours before serving.",
+        "rating": 4.7,
+        "favorite": false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "chefName": "Emily Johnson",
+    "chefPicture": "./chefs/chef_02.png",
+    "yearOfExperience": 8,
+    "numOfRecipes": 7,
+    "likes": 800,
+    "description": "Emily Johnson is a talented chef with 8 years of experience in creating mouthwatering dishes. Her culinary expertise includes both traditional and modern recipes.",
+    "category": "Mexican Cuisine",
+    "recipes": [
+      {
+        "recipeName": "Guacamole",
+        "ingredients": [
+          "avocados",
+          "lime juice",
+          "tomatoes",
+          "onions",
+          "cilantro"
+        ],
+        "cookingMethod": "Mash avocados in a bowl and add lime juice to prevent browning. Stir in diced tomatoes, finely chopped onions, and freshly chopped cilantro. Season with salt and pepper. Serve with tortilla chips.",
+        "rating": 4.9,
+        "favorite": false
+      },
+      {
+        "recipeName": "Chicken Enchiladas",
+        "ingredients": [
+          "cooked chicken",
+          "enchilada sauce",
+          "tortillas",
+          "cheddar cheese",
+          "sour cream"
+        ],
+        "cookingMethod": "Preheat the oven to 350°F. Mix cooked chicken with enchilada sauce. Place a spoonful of the chicken mixture on a tortilla and roll it up. Arrange the rolled tortillas in a baking dish. Sprinkle cheddar cheese on top. Bake for 20 minutes. Serve with sour cream.",
+        "rating": 4.7,
+        "favorite": false
+      },
+      {
+        "recipeName": "Churros",
+        "ingredients": [
+          "all-purpose flour",
+          "sugar",
+          "salt",
+          "water",
+          "vegetable oil"
+        ],
+        "cookingMethod": "In a saucepan, combine water, sugar, and salt. Bring to a boil and remove from heat. Stir in flour until the mixture forms a ball. Heat vegetable oil in a deep pan. Pipe the dough into the hot oil and fry until golden brown. Roll the churros in sugar. Serve warm.",
+        "rating": 4.6,
+        "favorite": false
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "chefName": "Michael Anderson",
+    "chefPicture": "./chefs/chef_03.png",
+    "yearOfExperience": 12,
+    "numOfRecipes": 6,
+    "likes": 1200,
+    "description": "Michael Anderson is a seasoned chef with 12 years of experience. He is passionate about creating innovative recipes that combine different culinary traditions.",
+    "category": "Asian Fusion Cuisine",
+    "recipes": [
+      {
+        "recipeName": "Pad Thai",
+        "ingredients": ["rice noodles", "shrimp", "tofu", "eggs", "peanuts"],
+        "cookingMethod": "Soak rice noodles in warm water until softened. Heat oil in a pan and add shrimp, tofu, and beaten eggs. Cook until shrimp is pink and eggs are scrambled. Add rice noodles and stir-fry for a few minutes. Toss in peanuts and serve hot.",
+        "rating": 4.8,
+        "favorite": false
+      },
+      {
+        "recipeName": "Teriyaki Chicken",
+        "ingredients": [
+          "chicken thighs",
+          "soy sauce",
+          "mirin",
+          "brown sugar",
+          "garlic"
+        ],
+        "cookingMethod": "In a bowl, mix soy sauce, mirin, brown sugar, and minced garlic. Marinate chicken thighs in the mixture for at least 30 minutes. Grill the chicken until cooked through, basting with the marinade. Serve with steamed rice and vegetables.",
+        "rating": 4.7,
+        "favorite": false
+      },
+      {
+        "recipeName": "Miso Soup",
+        "ingredients": [
+          "dashi stock",
+          "tofu",
+          "green onions",
+          "seaweed",
+          "miso paste"
+        ],
+        "cookingMethod": "Bring dashi stock to a simmer and add cubed tofu, chopped green onions, and sliced seaweed. Dissolve miso paste in a small amount of broth and add it to the soup. Stir well and simmer for a few minutes. Serve hot.",
+        "rating": 4.6,
+        "favorite": false
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "chefName": "Sarah Thompson",
+    "chefPicture": "./chefs/chef_04.png",
+    "yearOfExperience": 6,
+    "numOfRecipes": 4,
+    "likes": 400,
+    "description": "Sarah Thompson is a talented chef with a passion for creating healthy and nutritious meals. She believes in using fresh ingredients and incorporating flavors from around the world.",
+    "category": "Vegetarian Cuisine",
+    "recipes": [
+      {
+        "recipeName": "Quinoa Salad",
+        "ingredients": [
+          "quinoa",
+          "cucumbers",
+          "tomatoes",
+          "red onions",
+          "feta cheese"
+        ],
+        "cookingMethod": "Cook quinoa according to package instructions and let it cool. In a bowl, combine cooked quinoa, diced cucumbers, halved cherry tomatoes, thinly sliced red onions, and crumbled feta cheese. Toss with your favorite vinaigrette. Serve chilled.",
+        "rating": 4.4,
+        "favorite": false
+      },
+      {
+        "recipeName": "Stuffed Bell Peppers",
+        "ingredients": [
+          "bell peppers",
+          "quinoa",
+          "black beans",
+          "corn",
+          "cheese"
+        ],
+        "cookingMethod": "Cut the tops off bell peppers and remove the seeds. In a bowl, mix cooked quinoa, black beans, corn, and grated cheese. Stuff the bell peppers with the mixture. Bake in a preheated oven at 375°F for 20-25 minutes or until the peppers are tender. Serve hot.",
+        "rating": 4.6,
+        "favorite": false
+      },
+      {
+        "recipeName": "Vegetable Stir-Fry",
+        "ingredients": [
+          "mixed vegetables",
+          "soy sauce",
+          "ginger",
+          "garlic",
+          "sesame oil"
+        ],
+        "cookingMethod": "Heat sesame oil in a pan and add minced ginger and garlic. Stir-fry mixed vegetables until tender-crisp. Add soy sauce and continue cooking for a few more minutes. Serve hot with steamed rice or noodles.",
+        "rating": 4.3,
+        "favorite": false
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "chefName": "David Roberts",
+    "chefPicture": "./chefs/chef_05.png",
+    "yearOfExperience": 15,
+    "numOfRecipes": 10,
+    "likes": 1500,
+    "description": "David Roberts is a highly skilled and experienced chef known for his classic and elegant dishes. He has worked in renowned restaurants around the world, refining his culinary expertise.",
+    "category": "French Cuisine",
+    "recipes": [
+      {
+        "recipeName": "Coq au Vin",
+        "ingredients": ["chicken", "red wine", "bacon", "mushrooms", "onions"],
+        "cookingMethod": "In a Dutch oven, cook bacon until crispy. Remove bacon and brown chicken in the bacon fat. Add onions and mushrooms. Pour in red wine and simmer until the chicken is cooked through. Serve with the sauce and garnish with crispy bacon.",
+        "rating": 4.9,
+        "favorite": false
+      },
+      {
+        "recipeName": "Ratatouille",
+        "ingredients": [
+          "eggplant",
+          "zucchini",
+          "bell peppers",
+          "tomatoes",
+          "garlic"
+        ],
+        "cookingMethod": "Slice eggplant, zucchini, and bell peppers. Arrange the sliced vegetables and diced tomatoes in a baking dish. Drizzle with olive oil and sprinkle minced garlic over the top. Bake in a preheated oven at 375°F for 40-45 minutes. Serve as a side dish or over rice.",
+        "rating": 4.7,
+        "favorite": false
+      },
+      {
+        "recipeName": "Crème Brûlée",
+        "ingredients": [
+          "heavy cream",
+          "sugar",
+          "vanilla extract",
+          "egg yolks",
+          "brown sugar"
+        ],
+        "cookingMethod": "In a saucepan, heat heavy cream, sugar, and vanilla extract until simmering. In a separate bowl, whisk egg yolks. Slowly pour the hot cream mixture into the egg yolks, whisking constantly. Strain the mixture and pour into ramekins. Bake in a water bath at 325°F for 30-35 minutes. Sprinkle brown sugar on top and torch until caramelized.",
+        "rating": 4.8,
+        "favorite": false
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "chefName": "Maria Lopez",
+    "chefPicture": "./chefs/chef_06.png",
+    "yearOfExperience": 9,
+    "numOfRecipes": 6,
+    "likes": 950,
+    "description": "Maria Lopez is a talented chef specializing in authentic Mexican cuisine. She is known for her bold flavors, vibrant dishes, and dedication to preserving traditional cooking techniques.",
+    "category": "Mexican Cuisine",
+    "recipes": [
+      {
+        "recipeName": "Enchiladas Verdes",
+        "ingredients": [
+          "corn tortillas",
+          "chicken",
+          "green salsa",
+          "cheese",
+          "sour cream"
+        ],
+        "cookingMethod": "Dip corn tortillas in heated green salsa. Fill each tortilla with shredded chicken and roll it up. Place the rolled tortillas in a baking dish, pour more green salsa on top, and sprinkle cheese. Bake at 350°F for 15-20 minutes. Serve with sour cream.",
+        "rating": 4.7,
+        "favorite": false
+      },
+      {
+        "recipeName": "Tacos al Pastor",
+        "ingredients": [
+          "pork shoulder",
+          "achiote paste",
+          "pineapple",
+          "onions",
+          "cilantro"
+        ],
+        "cookingMethod": "Marinate pork shoulder with achiote paste and let it sit for at least 2 hours or overnight. Grill the marinated pork until cooked through. Slice the grilled pork and serve it in tortillas with diced pineapple, chopped onions, and fresh cilantro.",
+        "rating": 4.9,
+        "favorite": false
+      },
+      {
+        "recipeName": "Mexican Rice",
+        "ingredients": [
+          "rice",
+          "tomato sauce",
+          "onions",
+          "garlic",
+          "chicken broth"
+        ],
+        "cookingMethod": "In a pan, sauté rice, onions, and minced garlic until the rice is lightly browned. Stir in tomato sauce and chicken broth. Bring to a boil, then reduce heat, cover, and simmer for about 20 minutes or until the rice is cooked and liquid is absorbed.",
+        "rating": 4.6,
+        "favorite": false
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "chefName": "Robert Lee",
+    "chefPicture": "./chefs/chef_07.png",
+    "yearOfExperience": 11,
+    "numOfRecipes": 8,
+    "likes": 1100,
+    "description": "Robert Lee is a versatile chef known for his fusion of Asian and Western flavors. With his innovative recipes and attention to detail, he has gained a reputation for creating culinary masterpieces.",
+    "category": "Asian Fusion Cuisine",
+    "recipes": [
+      {
+        "recipeName": "Sushi Rolls",
+        "ingredients": [
+          "sushi rice",
+          "seaweed sheets",
+          "fish or vegetables",
+          "soy sauce",
+          "wasabi"
+        ],
+        "cookingMethod": "Prepare sushi rice according to package instructions. Lay a sheet of seaweed on a bamboo mat. Spread a thin layer of rice over the seaweed, leaving a small border. Place sliced fish or vegetables in the center and roll tightly using the bamboo mat. Slice the roll into bite-sized pieces. Serve with soy sauce and wasabi.",
+        "rating": 4.8,
+        "favorite": false
+      },
+      {
+        "recipeName": "Kung Pao Chicken",
+        "ingredients": [
+          "chicken breast",
+          "peanuts",
+          "dried red chilies",
+          "bell peppers",
+          "scallions"
+        ],
+        "cookingMethod": "Cut chicken breast into small pieces and stir-fry until cooked through. Add peanuts, dried red chilies, and diced bell peppers. Stir-fry for a few minutes. Add a sauce made from soy sauce, vinegar, sugar, and cornstarch. Cook until the sauce thickens. Garnish with chopped scallions and serve with steamed rice.",
+        "rating": 4.7,
+        "favorite": false
+      },
+      {
+        "recipeName": "Mango Sticky Rice",
+        "ingredients": [
+          "sticky rice",
+          "mangoes",
+          "coconut milk",
+          "sugar",
+          "toasted sesame seeds"
+        ],
+        "cookingMethod": "Soak sticky rice in water for at least 4 hours. Steam the rice until tender. In a saucepan, heat coconut milk and sugar until dissolved. Remove from heat. Serve the sticky rice with sliced ripe mangoes and drizzle the coconut milk mixture on top. Sprinkle with toasted sesame seeds.",
+        "rating": 4.5,
+        "favorite": false
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "chefName": "Jessica Davis",
+    "chefPicture": "./chefs/chef_08.png",
+    "yearOfExperience": 7,
+    "numOfRecipes": 5,
+    "likes": 600,
+    "description": "Jessica Davis is a passionate chef who loves experimenting with flavors and textures. Her recipes often feature a unique combination of ingredients, resulting in surprising and delightful dishes.",
+    "category": "Fusion Cuisine",
+    "recipes": [
+      {
+        "recipeName": "Thai Curry Pasta",
+        "ingredients": [
+          "spaghetti",
+          "coconut milk",
+          "red curry paste",
+          "vegetables",
+          "cilantro"
+        ],
+        "cookingMethod": "Cook spaghetti according to package instructions. In a pan, combine coconut milk and red curry paste. Add cooked spaghetti and stir-fry with vegetables of your choice. Garnish with fresh cilantro. Serve hot.",
+        "rating": 4.6,
+        "favorite": false
+      },
+      {
+        "recipeName": "Honey-Sriracha Chicken Wings",
+        "ingredients": [
+          "chicken wings",
+          "honey",
+          "sriracha sauce",
+          "soy sauce",
+          "garlic"
+        ],
+        "cookingMethod": "Preheat the oven to 400°F. In a bowl, mix honey, sriracha sauce, soy sauce, and minced garlic. Toss chicken wings in the sauce mixture until well coated. Arrange the wings on a baking sheet and bake for 35-40 minutes, turning once. Serve hot.",
+        "rating": 4.7,
+        "favorite": false
+      },
+      {
+        "recipeName": "Caprese Salad with a Twist",
+        "ingredients": [
+          "tomatoes",
+          "mozzarella cheese",
+          "avocado",
+          "balsamic glaze",
+          "basil leaves"
+        ],
+        "cookingMethod": "Slice tomatoes and mozzarella cheese. Arrange them on a plate with sliced avocado. Drizzle balsamic glaze over the salad. Garnish with fresh basil leaves. Season with salt and pepper to taste.",
+        "rating": 4.5,
+        "favorite": false
+      }
+    ]
+  }
+]

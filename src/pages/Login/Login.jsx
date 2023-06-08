@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProviders";
 
 const Login = () => {
-  const { loginUser, signInWithGoogle, signInWithGithub } =
+  const { user, loginUser, signInWithGoogle, signInWithGithub } =
     useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -44,7 +44,9 @@ const Login = () => {
   const handleSignInWithGoogle = () => {
     console.log(email, password);
     signInWithGoogle()
-      .then(() => {})
+      .then((res) => {
+        console.log(res.user);
+      })
       .catch((error) => {
         setSuccess(false);
         console.log(error);
@@ -111,9 +113,20 @@ const Login = () => {
                 </Link>
               </label>
             </div>
+            {success ? (
+              <p className="bg-success text-white p-3 mt-4 text-center rounded">
+                User signed in successfully
+              </p>
+            ) : error ? (
+              <p className="bg-error text-white p-3 mt-4 text-center rounded">
+                {errorMessage}
+              </p>
+            ) : (
+              ""
+            )}
             <div className="form-control mt-6">
-              <button type="submit" className="btn btn-primary">
-                Login
+              <button disabled={user} type="submit" className="btn btn-primary">
+                {loading ? "Loading..." : "Login"}
               </button>
             </div>
           </form>
@@ -122,6 +135,7 @@ const Login = () => {
           <div className="flex justify-center gap-3">
             <div>
               <button
+                disabled={user}
                 onClick={handleSignInWithGoogle}
                 className="btn btn-primary rounded-full"
               >
@@ -137,6 +151,7 @@ const Login = () => {
             </div>
             <div>
               <button
+                disabled={user}
                 onClick={handleSignInWithGithub}
                 className="btn btn-primary rounded-full"
               >
