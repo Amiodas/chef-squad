@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProviders";
 
 const Header = () => {
-  const { user, logOut } = useContext(AuthContext);
+  const { user, loading, logOut } = useContext(AuthContext);
   const handleLogout = () => {
     logOut()
       .then(() => {})
@@ -27,12 +27,20 @@ const Header = () => {
           <li className="mr-5">
             <ActiveLink to="/blogs">Blogs</ActiveLink>
           </li>
-          {user ? (
+          {loading ? (
+            <li className="mr-5">
+              <span className="loading loading-spinner loading-sm text-primary"></span>
+            </li>
+          ) : user ? (
             <li className="mr-5 text-primary font-bold">{user?.displayName}</li>
           ) : (
             ""
           )}
-          {user ? (
+          {loading ? (
+            <li className="mr-5">
+              <span className="loading loading-spinner loading-sm text-primary"></span>
+            </li>
+          ) : user ? (
             <li className="mr-5">
               <div className="avatar">
                 <div className="w-10 rounded-full">
@@ -51,14 +59,18 @@ const Header = () => {
           ) : (
             ""
           )}
-          {!user ? (
+          {loading ? (
+            ""
+          ) : !user ? (
             <li className="mr-5">
               <ActiveLink to="/login">Sign in</ActiveLink>
             </li>
           ) : (
             " "
           )}
-          {!user ? (
+          {loading ? (
+            ""
+          ) : !user ? (
             <li>
               <ActiveLink to="/register">Sign Up</ActiveLink>
             </li>

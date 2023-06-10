@@ -39,6 +39,7 @@ const router = createBrowserRouter([
             <ChefDetails />
           </PrivateRoute>
         ),
+        loader: ({params}) => fetch(`http://localhost:5000/chefs/${params.chefId}`)
       },
     ],
   },
