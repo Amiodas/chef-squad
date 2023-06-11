@@ -2,22 +2,26 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="hero min-h-screen bg-base-200">
+    <div className="hero min-h-screen bg-orange-600 text-white">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <img
-        width="600px"
-        height="600px"
+          width="500px"
           src="/src/assets/banner.png"
-          className="rounded-lg shadow-2xl"
+          className="rounded-lg"
         />
         <div>
-          <h1 className="text-5xl font-bold">Box Office News!</h1>
+          <h1 className="text-5xl font-bold mb-5">Choose your</h1>
+          <h1 className="text-5xl font-bold mb-5">Best Chefs, Best Recipes</h1>
+          <h1 className="text-5xl font-bold">Taste is Awesome!!</h1>
           <p className="py-6">
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
             excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
+            a id nisi. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Cum voluptatibus tempora deserunt ea numquam adipisci nostrum autem
+            eum quos at dolorem, inventore nemo doloremque rem repellendus amet
+            enim consequuntur molestias.
           </p>
-          <button className="btn btn-primary">Get Started</button>
+          <button className="btn bg-white border-0 font-bold btn-md text-orange-600 mt-6">Get your Chefs</button>
         </div>
       </div>
     </div>

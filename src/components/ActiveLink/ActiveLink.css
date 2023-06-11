@@ -1,8 +1,9 @@
 .active {
     font-size: bold;
-    background-color: #4f46e5;
+    /* background-color: #EA580C; */
+    border-bottom: 3px solid #EA580C;
     padding: 5px 10px;
-    color: white;
+    color: #EA580C;
     font-weight: bold;
     border-radius: 4px;
 }

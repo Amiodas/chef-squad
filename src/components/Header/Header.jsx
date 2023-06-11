@@ -13,71 +13,75 @@ const Header = () => {
       });
   };
   return (
-    <div className="navbar bg-base-100">
+    <div className="container mx-auto navbar text-orange-600">
       <div className="flex-1">
         <Link to="/" className="normal-case text-xl font-bold">
           Chef Squad
         </Link>
       </div>
       <div className="flex-none">
-        <ul className="menu-horizontal px-1">
-          <li className="mr-5">
-            <ActiveLink to="/">Home</ActiveLink>
-          </li>
-          <li className="mr-5">
-            <ActiveLink to="/blogs">Blogs</ActiveLink>
-          </li>
-          {loading ? (
+        <div className={user ? "mt-3" : ""}>
+          <ul className="menu-horizontal px-1">
             <li className="mr-5">
-              <span className="loading loading-spinner loading-sm text-primary"></span>
+              <ActiveLink to="/">Home</ActiveLink>
             </li>
-          ) : user ? (
-            <li className="mr-5 text-primary font-bold">{user?.displayName}</li>
-          ) : (
-            ""
-          )}
-          {loading ? (
             <li className="mr-5">
-              <span className="loading loading-spinner loading-sm text-primary"></span>
+              <ActiveLink to="/blogs">Blogs</ActiveLink>
             </li>
-          ) : user ? (
-            <li className="mr-5">
-              <div className="avatar">
-                <div className="w-10 rounded-full">
-                  <img src={user?.photoURL} />
+            {loading ? (
+              <li className="mr-5">
+                <span className="loading loading-spinner loading-sm text-primary"></span>
+              </li>
+            ) : user ? (
+              <li className="mr-5 font-bold">
+                {user?.displayName}
+              </li>
+            ) : (
+              ""
+            )}
+            {loading ? (
+              <li className="mr-5">
+                <span className="loading loading-spinner loading-sm text-primary"></span>
+              </li>
+            ) : user ? (
+              <li className="mr-5">
+                <div className="avatar">
+                  <div className="w-10 rounded-full">
+                    <img src={user?.photoURL} />
+                  </div>
                 </div>
-              </div>
-            </li>
-          ) : (
-            ""
-          )}
+              </li>
+            ) : (
+              ""
+            )}
 
-          {user ? (
-            <li>
-              <button onClick={handleLogout}>Sign out</button>
-            </li>
-          ) : (
-            ""
-          )}
-          {loading ? (
-            ""
-          ) : !user ? (
-            <li className="mr-5">
-              <ActiveLink to="/login">Sign in</ActiveLink>
-            </li>
-          ) : (
-            " "
-          )}
-          {loading ? (
-            ""
-          ) : !user ? (
-            <li>
-              <ActiveLink to="/register">Sign Up</ActiveLink>
-            </li>
-          ) : (
-            ""
-          )}
-        </ul>
+            {user ? (
+              <li>
+                <button onClick={handleLogout}>Sign out</button>
+              </li>
+            ) : (
+              ""
+            )}
+            {loading ? (
+              ""
+            ) : !user ? (
+              <li className="mr-5">
+                <ActiveLink to="/login">Sign in</ActiveLink>
+              </li>
+            ) : (
+              " "
+            )}
+            {loading ? (
+              ""
+            ) : !user ? (
+              <li>
+                <ActiveLink to="/register">Sign Up</ActiveLink>
+              </li>
+            ) : (
+              ""
+            )}
+          </ul>
+        </div>
       </div>
     </div>
   );

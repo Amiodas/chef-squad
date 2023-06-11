@@ -1,0 +1,21 @@
+.toast {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: 5px;
+    padding: 15px 25px;
+    /* border: 1px solid #1e863e; */
+    background-color: #1e863e;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem 2rem;
+}
+h4 {
+    margin: 0;
+}
+.no-toast {
+    display: none;
+}
