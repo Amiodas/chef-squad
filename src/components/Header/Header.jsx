@@ -13,7 +13,8 @@ const Header = () => {
       });
   };
   return (
-    <div className="container mx-auto navbar text-orange-600">
+    <div className="shadow-md">
+<div className="container mx-auto navbar text-orange-600">
       <div className="flex-1">
         <Link to="/" className="normal-case text-xl font-bold">
           Chef Squad
@@ -33,9 +34,7 @@ const Header = () => {
                 <span className="loading loading-spinner loading-sm text-primary"></span>
               </li>
             ) : user ? (
-              <li className="mr-5 font-bold">
-                {user?.displayName}
-              </li>
+              <li className="mr-5 font-bold">{user?.displayName}</li>
             ) : (
               ""
             )}
@@ -83,6 +82,7 @@ const Header = () => {
           </ul>
         </div>
       </div>
+    </div>
     </div>
   );
 };

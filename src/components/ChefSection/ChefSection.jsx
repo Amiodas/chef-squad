@@ -5,7 +5,7 @@ const ChefSection = () => {
   const [chefs, setChefs] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch("data.json")
+    fetch("http://localhost:5000/chefs")
       .then((response) => response.json())
       .then((data) => setChefs(data));
     setLoading(false);

@@ -77,17 +77,17 @@ const Login = () => {
       });
   };
   return (
-    <div className="hero min-h-screen bg-base-200">
+    <div className="hero min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold">Login now!</h1>
+          <h1 className="text-5xl font-bold text-orange-600">Login now!</h1>
           <p className="py-6">
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
             excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
             a id nisi.
           </p>
         </div>
-        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl">
           <form onSubmit={handleLogin} className="card-body">
             <div className="form-control">
               <label className="label">
@@ -98,7 +98,7 @@ const Login = () => {
                 type="email"
                 placeholder="email"
                 name="email"
-                className="input input-bordered"
+                className="input input-bordered bg-white"
                 required
               />
             </div>
@@ -111,7 +111,7 @@ const Login = () => {
                 type="password"
                 placeholder="password"
                 name="password"
-                className="input input-bordered"
+                className="input input-bordered bg-white"
                 required
               />
               <label className="label">
@@ -135,7 +135,7 @@ const Login = () => {
               ""
             )}
             <div className="form-control mt-6">
-              <button disabled={user} type="submit" className="btn btn-primary">
+              <button disabled={user} type="submit" className="btn bg-orange-500 text-white border-0 hover:bg-orange-600">
                 {loading ? "Loading..." : "Login"}
               </button>
             </div>
@@ -147,7 +147,7 @@ const Login = () => {
               <button
                 disabled={user}
                 onClick={handleSignInWithGoogle}
-                className="btn btn-primary rounded-full"
+                className="btn bg-orange-500 text-white border-0 hover:bg-orange-600 rounded-full"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -163,7 +163,7 @@ const Login = () => {
               <button
                 disabled={user}
                 onClick={handleSignInWithGithub}
-                className="btn btn-primary rounded-full"
+                className="btn bg-orange-500 text-white border-0 hover:bg-orange-600 rounded-full"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -178,7 +178,7 @@ const Login = () => {
           </div>
           <small className="text-center mt-3 mb-10">
             Have no account?{" "}
-            <Link to="/login" className="link link-hover">
+            <Link to="/register" className="link link-hover">
               register now
             </Link>
           </small>
