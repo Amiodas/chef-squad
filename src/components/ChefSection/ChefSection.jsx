@@ -11,7 +11,7 @@ const ChefSection = () => {
     setLoading(false);
   }, []);
   return (
-    <div className="text-center min-h-screen py-16">
+    <div className="text-center min-h-screen mt-16 py-16">
       <div className="container mx-auto">
         <h3 className="text-5xl font-bold text-orange-600">Chef Section</h3>
         <p className="mt-4 mb-16 px-16 text-sm text-gray-500">
@@ -29,30 +29,32 @@ const ChefSection = () => {
               </div>
             ) : (
               <div
-                className="bg-gray-100 text-gray-500 px-4 pt-4 border-2 border-gray-100 rounded-lg shadow-sm hover:border-2 hover:border-orange-300"
+                className="bg-gray-100 text-gray-500 border-2 border-gray-100 shadow-sm hover:border-2 hover:border-orange-300"
                 key={chef.id}
               >
                 <div className="mb-5">
                   <img
-                    className="bg-white rounded"
+                    className="bg-orange-500 px-3"
                     width="100%"
                     style={{ height: "300px", objectFit: "contain" }}
                     src={chef.chefPicture}
                     alt=""
                   />
                 </div>
-                <h3 className="text-2xl text-orange-600">{chef.chefName}</h3>
-                <p className="text-sm mb-1 mt-3">
-                  Year of experience: {chef.yearOfExperience}
-                </p>
-                <p className="text-sm mb-1">Recipes: {chef.numOfRecipes}</p>
-                <p className="text-sm mb-1">Likes: {chef.likes}</p>
-                <div className="mt-5">
-                  <Link to={`/chef_details/${chef.id}`}>
-                    <button className="btn bg-orange-500 text-white mb-5 border-0 hover:bg-orange-600">
-                      View Recipe
-                    </button>
-                  </Link>
+                <div className="px-4">
+                  <h3 className="text-xl text-orange-600">{chef.chefName}</h3>
+                  <p className="text-sm mb-1 mt-3">
+                    Year of experience: {chef.yearOfExperience}
+                  </p>
+                  <p className="text-sm mb-1">Recipes: {chef.numOfRecipes}</p>
+                  <p className="text-sm mb-1">Likes: {chef.likes}</p>
+                  <div className="mt-5">
+                    <Link to={`/chef_details/${chef.id}`}>
+                      <button className="btn bg-orange-500 text-white mb-5 border-0 hover:bg-orange-600">
+                        View Recipe
+                      </button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             )
