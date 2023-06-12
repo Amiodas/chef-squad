@@ -12,7 +12,7 @@ const Category = () => {
         commodi sequi provident nostrum et sit.
       </p>
       <div className="grid grid-cols-4 justify-center text-left gap-10">
-        <div className="bg-orange-300 p-4 text-orange-600 border-2 border-orange-400 rounded">
+        <div className="bg-orange-600 p-4 text-orange-600 border-2 border-orange-400 rounded">
           <div className="flex">
             <svg
               xmlns="http://www.w3.org/2000/svg"
