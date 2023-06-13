@@ -1,6 +1,15 @@
 import React from "react";
 
 const Banner = () => {
+  const scrollToElement = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
   return (
     <div className="hero min-h-screen bg-orange-600 text-white">
       <div className="hero-content flex-col lg:flex-row-reverse">
@@ -21,7 +30,12 @@ const Banner = () => {
             eum quos at dolorem, inventore nemo doloremque rem repellendus amet
             enim consequuntur molestias.
           </p>
-          <button className="btn bg-white border-0 font-bold btn-md text-orange-600 mt-6">Get your Chefs</button>
+          <button
+            onClick={() => scrollToElement("chefs")}
+            className="btn bg-white border-0 font-bold btn-md text-orange-600 mt-6 hover:bg-gray-200"
+          >
+            Get your Chefs
+          </button>
         </div>
       </div>
     </div>

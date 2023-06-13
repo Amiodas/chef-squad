@@ -11,7 +11,7 @@ const ChefSection = () => {
     setLoading(false);
   }, []);
   return (
-    <div className="text-center min-h-screen pt-16">
+    <div id="chefs" className="text-center min-h-screen pt-16">
       <div className="container mx-auto">
         <h3 className="text-5xl font-bold text-orange-600">Chef Section</h3>
         <p className="mt-4 mb-16 px-16 text-sm text-gray-500">
