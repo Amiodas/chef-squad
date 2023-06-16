@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
+import LazyLoad from "react-lazy-load";
 import { Link } from "react-router-dom";
 
 const ChefSection = () => {
   const [chefs, setChefs] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch("http://localhost:5000/chefs")
+    fetch("https://assignment-10-backend-amiodas.vercel.app/chefs/")
       .then((response) => response.json())
       .then((data) => setChefs(data));
     setLoading(false);
@@ -25,7 +26,7 @@ const ChefSection = () => {
           {chefs.map((chef) =>
             loading ? (
               <div key={chef.id} className="mx-auto py-16">
-                <span className="loading loading-spinner loading-lg text-primary"></span>
+                <span className="loading loading-dots loading-lg text-orange-600"></span>
               </div>
             ) : (
               <div
@@ -33,13 +34,16 @@ const ChefSection = () => {
                 key={chef.id}
               >
                 <div className="mb-5">
-                  <img
-                    className="bg-gray-300 px-3"
-                    width="100%"
-                    style={{ height: "300px", objectFit: "contain" }}
-                    src={chef.chefPicture}
-                    alt=""
-                  />
+                  <p>{chef.chefPicture}</p>
+                  <LazyLoad height={300} width="100" threshold={0.95}>
+                    <img
+                      className="bg-gray-300 px-3"
+                      width="100%"
+                      style={{ height: "300px", objectFit: "contain" }}
+                      src={chef.chefPicture}
+                      alt=""
+                    />
+                  </LazyLoad>
                 </div>
                 <div className="px-4">
                   <h3 className="text-xl text-orange-600">{chef.chefName}</h3>

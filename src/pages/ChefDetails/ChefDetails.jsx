@@ -1,37 +1,71 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import CustomToast from "../../components/CustomToast/CustomToast";
 
 const ChefDetails = () => {
   const [recipe, setRecipe] = useState(null);
+  const [favoriteRecipes, setFavoriteRecipes] = useState([]);
   const [showToast, setShowToast] = useState(false);
   const chefDetails = useLoaderData();
-  console.log(chefDetails);
+  const favoriteRecipesRef = useRef(favoriteRecipes);
+  favoriteRecipesRef.current = favoriteRecipes;
 
   useEffect(() => {
     const selectedRecipe = chefDetails?.recipes[0];
     setRecipe(selectedRecipe);
   }, [chefDetails]);
 
+  useEffect(() => {
+    const storedRecipes = JSON.parse(localStorage.getItem("favoriteRecipes"));
+    if (storedRecipes) {
+      setFavoriteRecipes(storedRecipes);
+    }
+  }, []);
+
   const handleLoadRecipe = (index) => {
     const selectedRecipe = chefDetails?.recipes[index];
     setRecipe(selectedRecipe);
   };
 
-  const handleFavoriteBtn = (id) => {
-    console.log(id);
-    // setShowToast((current) => (current = true));
-    // setTimeout(() => {
-    //   setShowToast((current) => (current = false));
-    // }, 2000);
+  const handleFavoriteItems = (setId, recipeId) => {
+    const newRecipe = { setId, recipeId };
+    const isDuplicate = favoriteRecipes.some(
+      (recipe) => recipe.setId === setId && recipe.recipeId === recipeId
+    );
+    if (isDuplicate) {
+      // Recipe already exists, do not add it again
+      return;
+    }
+    setFavoriteRecipes((prevFavorites) => {
+      setShowToast((current) => (current = true));
+      setTimeout(() => {
+        setShowToast((current) => (current = false));
+      }, 2000);
+      const updatedFavorites = [...prevFavorites];
+      updatedFavorites.push(newRecipe);
+      localStorage.setItem("favoriteRecipes", JSON.stringify(updatedFavorites));
+      return updatedFavorites;
+    });
   };
+
+  const isRecipeFavorite = (setId, recipeId) => {
+    return favoriteRecipes.some(
+      (recipe) => recipe?.setId === setId && recipe?.recipeId === recipeId
+    );
+  };
+
   return (
-    <div className="container mx-auto mb-16">
+    <div className="container mx-auto mt-10 mb-16">
       <CustomToast showToast={showToast}></CustomToast>
       <div className="banner card card-compact bg-gray-100 p-10 rounded-none shadow-sm mb-10">
         <div className="flex gap-10">
           <div className="flex justify-center items-center bg-slate-300">
-            <img width="200px" height="180px" src={chefDetails.chefPicture} alt="" />
+            <img
+              width="200px"
+              height="180px"
+              src={chefDetails.chefPicture}
+              alt=""
+            />
           </div>
           <div className="flex-auto">
             <h2 className="text-2xl font-bold text-orange-600">About Chef:</h2>
@@ -68,8 +102,10 @@ const ChefDetails = () => {
                 Recipe name: {recipe?.recipeName}
               </p>
               <button
-                disabled={recipe?.favorite}
-                onClick={() => handleFavoriteBtn(recipe.recipeId)}
+                onClick={() =>
+                  handleFavoriteItems(chefDetails?.id, recipe?.recipeId)
+                }
+                disabled={isRecipeFavorite(chefDetails?.id, recipe?.recipeId)}
                 className="btn bg-orange-500 border-0 hover:bg-orange-600"
               >
                 <svg
@@ -82,12 +118,19 @@ const ChefDetails = () => {
                 </svg>
               </button>
             </div>
-            <p><span className="text-orange-600">Cooking Method: </span> {recipe?.cookingMethod}</p>
-            <p><span className="text-orange-600">Rating: </span> {recipe?.rating}</p>
+            <p>
+              <span className="text-orange-600">Cooking Method: </span>{" "}
+              {recipe?.cookingMethod}
+            </p>
+            <p>
+              <span className="text-orange-600">Rating: </span> {recipe?.rating}
+            </p>
             <div>
               <span className="text-orange-600">Ingredients:</span>{" "}
               {recipe?.ingredients.map((ingred, index) => (
-                <span key={index} className="capitalize">{ingred}, </span>
+                <span key={index} className="capitalize">
+                  {ingred},{" "}
+                </span>
               ))}
             </div>
           </div>

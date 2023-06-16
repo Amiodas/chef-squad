@@ -25,6 +25,7 @@ const Footer = () => {
         <a className="link link-hover">Occation</a>
         <a className="link link-hover">Marriage Ceremony</a>
         <a className="link link-hover">Birthday Party</a>
+        <a className="link link-hover">Chef Training</a>
       </div>
       <div>
         <span className="footer-title">Company</span>

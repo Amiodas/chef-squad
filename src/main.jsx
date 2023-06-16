@@ -41,7 +41,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/chefs/${params.chefId}`),
+          fetch(`https://assignment-10-backend-amiodas.vercel.app/chefs/${params.chefId}`),
       },
       {
         path: "*",

@@ -46,7 +46,7 @@ const Header = () => {
                 <li className="mr-5">
                   <div className="avatar">
                     <div className="w-10 rounded-full">
-                      <img src={user?.photoURL} />
+                      <img src={user?.photoURL} title={user?.displayName} />
                     </div>
                   </div>
                 </li>

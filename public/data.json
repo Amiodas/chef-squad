@@ -10,6 +10,7 @@
     "category": "Italian Cuisine",
     "recipes": [
       {
+        "recipeId": 1,
         "recipeName": "Spaghetti Bolognese",
         "ingredients": [
           "spaghetti",
@@ -23,6 +24,7 @@
         "favorite": false
       },
       {
+        "recipeId": 2,
         "recipeName": "Margherita Pizza",
         "ingredients": [
           "pizza dough",
@@ -36,6 +38,7 @@
         "favorite": false
       },
       {
+        "recipeId": 3,
         "recipeName": "Tiramisu",
         "ingredients": [
           "ladyfingers",
@@ -61,6 +64,7 @@
     "category": "Mexican Cuisine",
     "recipes": [
       {
+        "recipeId": 1,
         "recipeName": "Guacamole",
         "ingredients": [
           "avocados",
@@ -74,6 +78,7 @@
         "favorite": false
       },
       {
+        "recipeId": 2,
         "recipeName": "Chicken Enchiladas",
         "ingredients": [
           "cooked chicken",
@@ -87,6 +92,7 @@
         "favorite": false
       },
       {
+        "recipeId": 3,
         "recipeName": "Churros",
         "ingredients": [
           "all-purpose flour",
@@ -112,6 +118,7 @@
     "category": "Asian Fusion Cuisine",
     "recipes": [
       {
+        "recipeId": 1,
         "recipeName": "Pad Thai",
         "ingredients": ["rice noodles", "shrimp", "tofu", "eggs", "peanuts"],
         "cookingMethod": "Soak rice noodles in warm water until softened. Heat oil in a pan and add shrimp, tofu, and beaten eggs. Cook until shrimp is pink and eggs are scrambled. Add rice noodles and stir-fry for a few minutes. Toss in peanuts and serve hot.",
@@ -119,6 +126,7 @@
         "favorite": false
       },
       {
+        "recipeId": 2,
         "recipeName": "Teriyaki Chicken",
         "ingredients": [
           "chicken thighs",
@@ -132,6 +140,7 @@
         "favorite": false
       },
       {
+        "recipeId": 3,
         "recipeName": "Miso Soup",
         "ingredients": [
           "dashi stock",
@@ -157,6 +166,7 @@
     "category": "Vegetarian Cuisine",
     "recipes": [
       {
+        "recipeId": 1,
         "recipeName": "Quinoa Salad",
         "ingredients": [
           "quinoa",
@@ -170,6 +180,7 @@
         "favorite": false
       },
       {
+        "recipeId": 2,
         "recipeName": "Stuffed Bell Peppers",
         "ingredients": [
           "bell peppers",
@@ -183,6 +194,7 @@
         "favorite": false
       },
       {
+        "recipeId": 3,
         "recipeName": "Vegetable Stir-Fry",
         "ingredients": [
           "mixed vegetables",
@@ -208,6 +220,7 @@
     "category": "French Cuisine",
     "recipes": [
       {
+        "recipeId": 1,
         "recipeName": "Coq au Vin",
         "ingredients": ["chicken", "red wine", "bacon", "mushrooms", "onions"],
         "cookingMethod": "In a Dutch oven, cook bacon until crispy. Remove bacon and brown chicken in the bacon fat. Add onions and mushrooms. Pour in red wine and simmer until the chicken is cooked through. Serve with the sauce and garnish with crispy bacon.",
@@ -215,6 +228,7 @@
         "favorite": false
       },
       {
+        "recipeId": 2,
         "recipeName": "Ratatouille",
         "ingredients": [
           "eggplant",
@@ -228,6 +242,7 @@
         "favorite": false
       },
       {
+        "recipeId": 3,
         "recipeName": "Crème Brûlée",
         "ingredients": [
           "heavy cream",
@@ -253,6 +268,7 @@
     "category": "Mexican Cuisine",
     "recipes": [
       {
+        "recipeId": 1,
         "recipeName": "Enchiladas Verdes",
         "ingredients": [
           "corn tortillas",
@@ -266,6 +282,7 @@
         "favorite": false
       },
       {
+        "recipeId": 2,
         "recipeName": "Tacos al Pastor",
         "ingredients": [
           "pork shoulder",
@@ -279,6 +296,7 @@
         "favorite": false
       },
       {
+        "recipeId": 3,
         "recipeName": "Mexican Rice",
         "ingredients": [
           "rice",
@@ -304,6 +322,7 @@
     "category": "Asian Fusion Cuisine",
     "recipes": [
       {
+        "recipeId": 1,
         "recipeName": "Sushi Rolls",
         "ingredients": [
           "sushi rice",
@@ -317,6 +336,7 @@
         "favorite": false
       },
       {
+        "recipeId": 2,
         "recipeName": "Kung Pao Chicken",
         "ingredients": [
           "chicken breast",
@@ -330,6 +350,7 @@
         "favorite": false
       },
       {
+        "recipeId": 3,
         "recipeName": "Mango Sticky Rice",
         "ingredients": [
           "sticky rice",
@@ -355,6 +376,7 @@
     "category": "Fusion Cuisine",
     "recipes": [
       {
+        "recipeId": 1,
         "recipeName": "Thai Curry Pasta",
         "ingredients": [
           "spaghetti",
@@ -368,6 +390,7 @@
         "favorite": false
       },
       {
+        "recipeId": 2,
         "recipeName": "Honey-Sriracha Chicken Wings",
         "ingredients": [
           "chicken wings",
@@ -381,6 +404,7 @@
         "favorite": false
       },
       {
+        "recipeId": 3,
         "recipeName": "Caprese Salad with a Twist",
         "ingredients": [
           "tomatoes",
