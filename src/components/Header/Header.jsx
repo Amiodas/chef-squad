@@ -14,13 +14,13 @@ const Header = () => {
   };
   return (
     <div className="shadow-md">
-      <div className="container mx-auto navbar text-orange-600">
-        <div className="flex-1">
+      <div className="container flex justify-between items-center mx-auto navbar text-orange-600">
+        <div className="md:flex-1">
           <Link to="/" className="normal-case text-2xl font-bold">
             Chef Squad
           </Link>
         </div>
-        <div className="flex-none">
+        <div className="md:flex-none">
           <div className={user ? "mt-3" : ""}>
             <ul className="menu-horizontal px-1">
               <li className="mr-5">
@@ -34,7 +34,7 @@ const Header = () => {
                   <span className="loading loading-spinner loading-sm text-primary"></span>
                 </li>
               ) : user ? (
-                <li className="mr-5 font-bold">{user?.displayName}</li>
+                <li className="mr-5 font-bold hidden md:block">{user?.displayName}</li>
               ) : (
                 ""
               )}
@@ -43,7 +43,7 @@ const Header = () => {
                   <span className="loading loading-spinner loading-sm text-primary"></span>
                 </li>
               ) : user ? (
-                <li className="mr-5">
+                <li className="mr-5 font-bold hidden md:block">
                   <div className="avatar">
                     <div className="w-10 rounded-full">
                       <img src={user?.photoURL} title={user?.displayName} />

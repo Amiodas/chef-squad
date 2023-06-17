@@ -15,14 +15,14 @@ const ChefSection = () => {
     <div id="chefs" className="text-center min-h-screen pt-16">
       <div className="container mx-auto">
         <h3 className="text-5xl font-bold text-orange-600">Chef Section</h3>
-        <p className="mt-4 mb-16 px-16 text-sm text-gray-500">
+        <p className="mt-4 mb-6 md:mb-16 px-6 md:px-16 text-sm text-gray-500">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
           quisquam tempora quae, impedit corporis quo sed, quia quod in, dolorum
           tempore dignissimos ducimus blanditiis. Blanditiis placeat officia eum
           inventore deleniti? Ad voluptates totam veritatis facilis minus cum,
           commodi sequi provident nostrum et sit.
         </p>
-        <div className="grid grid-cols-4 justify-center text-left gap-10">
+        <div className="grid mx-5 md:grid-cols-4 justify-center text-left gap-10">
           {chefs.map((chef) =>
             loading ? (
               <div key={chef.id} className="mx-auto py-16">
@@ -34,7 +34,6 @@ const ChefSection = () => {
                 key={chef.id}
               >
                 <div className="mb-5">
-                  <p>{chef.chefPicture}</p>
                   <LazyLoad height={300} width="100" threshold={0.95}>
                     <img
                       className="bg-gray-300 px-3"

@@ -4,7 +4,7 @@ import Pdf from "react-to-pdf";
 const ref = React.createRef();
 const Blogs = () => {
   return (
-    <div className="container mx-auto min-h-full my-10">
+    <div className="container mx-auto min-h-full my-10 px-6 md:px-0">
       <div className="flex items-center justify-between">
         <h3 className="text-xl text-orange-600 font-bold">#Blogs</h3>
 

@@ -58,12 +58,12 @@ const ChefDetails = () => {
     <div className="container mx-auto mt-10 mb-16">
       <CustomToast showToast={showToast}></CustomToast>
       <div className="banner card card-compact bg-gray-100 p-10 rounded-none shadow-sm mb-10">
-        <div className="flex gap-10">
+        <div className="md:flex gap-10">
           <div className="flex justify-center items-center bg-slate-300">
             <img
               width="200px"
               height="180px"
-              src={chefDetails.chefPicture}
+              src={chefDetails?.chefPicture}
               alt=""
             />
           </div>
@@ -71,23 +71,23 @@ const ChefDetails = () => {
             <h2 className="text-2xl font-bold text-orange-600">About Chef:</h2>
             <hr className="bg-orange-600 mb-3" />
             <h3 className="text-xl mb-1 text-orange-600">
-              {chefDetails.chefName}
+              {chefDetails?.chefName}
             </h3>
-            <p className="text-gray-600">Category: {chefDetails.category}</p>
+            <p className="text-gray-600">Category: {chefDetails?.category}</p>
             <p className="text-gray-600">
-              Year of experience: {chefDetails.yearOfExperience}
+              Year of experience: {chefDetails?.yearOfExperience}
             </p>
             <p className="text-gray-600">
-              Number of recipes: {chefDetails.numOfRecipes}
+              Number of recipes: {chefDetails?.numOfRecipes}
             </p>
-            <p className="text-gray-600">Likes: {chefDetails.likes}</p>
+            <p className="text-gray-600">Likes: {chefDetails?.likes}</p>
             <p className="text-gray-600">
-              Description: {chefDetails.description}
+              Description: {chefDetails?.description}
             </p>
           </div>
         </div>
         <div className="mt-10">
-          {chefDetails.recipes?.map((recipe, index) => (
+          {chefDetails?.recipes?.map((recipe, index) => (
             <button
               key={index}
               className="btn border-0 bg-orange-500 text-white hover:bg-orange-600 rounded-none"

@@ -6,14 +6,14 @@ const Category = () => {
       <h3 className="text-5xl font-bold text-center text-orange-600">
         Select Our Chefs
       </h3>
-      <p className="mt-4 mb-16 px-16 text-sm text-center text-gray-500">
+      <p className="mt-4 mb-6 md:mb-16 px-6 md:px-16 text-sm text-center text-gray-500">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
         quisquam tempora quae, impedit corporis quo sed, quia quod in, dolorum
         tempore dignissimos ducimus blanditiis. Blanditiis placeat officia eum
         inventore deleniti? Ad voluptates totam veritatis facilis minus cum,
         commodi sequi provident nostrum et sit.
       </p>
-      <div className="grid grid-cols-4 justify-center text-left gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-4 md:gap-10 justify-center text-left">
         <div className="bg-orange-300 p-4 text-orange-600 border-2 border-orange-400 rounded">
           <div className="flex">
             <svg

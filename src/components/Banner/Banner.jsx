@@ -12,15 +12,15 @@ const Banner = () => {
   };
   return (
     <div className="hero min-h-screen bg-orange-600 text-white">
-      <div className="hero-content flex-col lg:flex-row-reverse">
+      <div className="hero-content flex-col pb-16 lg:flex-row-reverse">
         <img
           width="500px"
-          src="/src/assets/banner.png"
+          src="./banner.png"
           className="rounded-lg"
         />
         <div>
-          <h1 className="text-5xl font-bold mb-5">Choose your</h1>
-          <h1 className="text-5xl font-bold mb-5">Best Chefs, Best Recipes</h1>
+          <h1 className="text-5xl font-bold mb-3 md:mb-5">Choose your</h1>
+          <h1 className="text-5xl font-bold mb-3 md:mb-5">Best Chefs, Best Recipes</h1>
           <h1 className="text-5xl font-bold">Taste is Awesome!!</h1>
           <p className="py-6">
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
