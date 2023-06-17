@@ -2,7 +2,7 @@ import React from "react";
 
 const Category = () => {
   return (
-    <div className="container mx-auto mt-16">
+    <div className="container mx-auto mt-10 md:mt-16 px-6 md:px-0">
       <h3 className="text-5xl font-bold text-center text-orange-600">
         Select Our Chefs
       </h3>
@@ -13,7 +13,7 @@ const Category = () => {
         inventore deleniti? Ad voluptates totam veritatis facilis minus cum,
         commodi sequi provident nostrum et sit.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-4 md:gap-10 justify-center text-left">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-2 md:gap-10 justify-center text-left">
         <div className="bg-orange-300 p-4 text-orange-600 border-2 border-orange-400 rounded">
           <div className="flex">
             <svg
